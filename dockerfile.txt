@@ -1,0 +1,13 @@
+#base image
+FROM node:alpine
+
+#install dependancies
+WOrKDIR /usr/helloapp
+COPY ./ ./
+RUN npm install
+
+#expose to port
+EXPOSE 5000
+
+#stattup coomand
+CMD ["npm","start"]
